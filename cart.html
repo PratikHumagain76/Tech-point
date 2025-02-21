@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - TechPoint</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="script.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <main class="container">
+        <h1>Shopping Cart</h1>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="cart-total">
+            <h3>Total: $<span id="cartTotal">0.00</span></h3>
+            <button onclick="checkout()" class="checkout-btn">Checkout</button>
+        </div>
+    </main>
+    <script>
+        function renderCart() {
+            const cartItems = document.getElementById('cartItems');
+            cartItems.innerHTML = cart.items.map(item => `
+                <div class="cart-item" data-id="${item.id}">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="item-details">
+                        <h3>${item.name}</h3>
+                        <p>$${item.price}</p>
+                        <input type="number" value="${item.quantity}" min="1" 
+                            onchange="cart.updateQuantity(${item.id}, this.value)">
+                    </div>
+                    <button class="remove-btn" onclick="cart.removeItem(${item.id})">Remove</button>
+                </div>
+            `).join('');
+            document.getElementById('cartTotal').textContent = cart.getTotal().toFixed(2);
+        }
+        function checkout() {
+            alert('Checkout functionality will be implemented with backend integration');
+        }
+        renderCart();
+    </script>
+    <footer>
+        <!-- ...existing code... -->
+    </footer>
+</body>
+</html>

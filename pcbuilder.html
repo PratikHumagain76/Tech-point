@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>PC Builder - TechPoint</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="js/cart.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+    <script src="js/pc-parts.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+</head>
+<body>
+    <nav class="navbar"></nav>
+    <main class="container">
+        <div class="pc-builder-container">
+            <div class="component-sidebar">
+                <h2>Build Your PC</h2>
+                <div class="total-price">
+                    <h3>Total: $<span id="buildTotal">0.00</span></h3>
+                    <button id="saveBuild" class="primary-btn">Save Build</button>
+                    <button id="addToCart" class="secondary-btn">Add to Cart</button>
+                </div>
+            </div>
+            <div class="component-selection">
+                <div class="component-row" data-type="cpu">
+                    <div class="component-label">
+                        <img src="images/icons/cpu.png" alt="CPU">
+                        <span>Processor</span>
+                    </div>
+                    <div class="component-choose">
+                        <select class="component-select" onchange="pcBuilder.updateComponent('cpu', this.value)">
+                            <option value="">Choose CPU</option>
+                        </select>
+                    </div>
+                    <div class="component-price">$<span>0.00</span></div>
+                </div>
+                <!-- Repeat similar blocks for other components -->
+                <div class="compatibility-check">
+                    <h3>Compatibility Status</h3>
+                    <div id="compatibilityMessages" class="messages"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><!-- ...existing code... --></footer>
+</body>
+</html>

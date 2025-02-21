@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>TechPoint</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="script.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TechPoint</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="laptops.html">Laptops</a></li>
+            <li><a href="pcbuilder.html">PC Builder</a></li>
+            <li><a href="cart.html">My Cart</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <section class="hero">
+            <h1>Welcome to TechPoint</h1>
+            <p>Your one-stop shop for all tech needs</p>
+        </section>
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="1">
+                    <img src="Razer Blade 15.webp" alt="Gaming Laptop">
+                    <h3>Razer Blade 15</h3>
+                    <p class="price">$1,499.99</p>
+                    <button onclick="cart.addItem({id:1,name:'Razer Blade 15',price:1499.99,image:'images/gaming-laptop-1.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card" data-id="2">
+                    <img src="rogdesktop.jpg" alt="Gaming Desktop">
+                    <h3>ROG Gaming Desktop</h3>
+                    <p>$2,199.99</p>
+                    <button onclick="cart.addItem({id:2,name:'ROG Gaming Desktop',price:2199.99,image:'images/desktop-1.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card" data-id="3">
+                    <img src="dellxps.webp" alt="Business Laptop">
+                    <h3>Dell XPS 13</h3>
+                    <p>$1,299.99</p>
+                    <button onclick="cart.addItem({id:3,name:'Dell XPS 13',price:1299.99,image:'images/laptop-3.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="popular-products">
+            <h2>Popular Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-id="4">
+                    <img src="gaming-laptop-3.jpg" alt="Gaming Laptop">
+                    <h3>Alienware m17</h3>
+                    <p>$2,099.99</p>
+                    <button onclick="cart.addItem({id:4,name:'Alienware m17',price:2099.99,image:'images/gaming-laptop-3.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card" data-id="5">
+                    <img src="business-laptop-2.jpg" alt="Business Laptop">
+                    <h3>MacBook Pro 16</h3>
+                    <p>$2,499.99</p>
+                    <button onclick="cart.addItem({id:5,name:'MacBook Pro 16',price:2499.99,image:'images/business-laptop-2.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="product-card" data-id="6">
+                    <img src="business-laptop-1.jpg" alt="Business Laptop">
+                    <h3>ThinkPad X1 Carbon</h3>
+                    <p>$1,399.99</p>
+                    <button onclick="cart.addItem({id:6,name:'ThinkPad X1 Carbon',price:1399.99,image:'images/business-laptop-1.jpg'})">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 TechPoint. All rights reserved.</p>
+    </footer>
+    <script src="assets/js/pages/pcBuilder.js"></script>
+    <script src="assets/js/pages/LoginPage.js"></script>
+    <script src="assets/js/pages/HomePage.js"></script>
+    <script src="assets/js/pages/ComparisonPage.js"></script>
+    <script src="assets/js/pages/CheckoutPage.js"></script>
+    <script src="assets/js/pages/CartPage.js"></script>
+    <script src="assets/js/pages/cart.js"></script>
+    <script src="assets/js/pages/AdminLoginPage.js"></script>
+</body>
+</html>

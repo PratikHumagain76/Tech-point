@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <section id="checkout-details">
+            <h2>Your Order</h2>
+            <div id="order-summary">
+                <!-- Order summary will be populated here -->
+            </div>
+            <h2>Shipping Information</h2>
+            <form id="shipping-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="address">Address:</label>
+                <input type="text" id="address" required>
+                
+                <label for="city">City:</label>
+                <input type="text" id="city" required>
+                
+                <label for="zip">Zip Code:</label>
+                <input type="text" id="zip" required>
+                
+                <label for="payment-method">Payment Method:</label>
+                <select id="payment-method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPal</option>
+                </select>
+                
+                <button type="submit">Complete Purchase</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Laptop E-Commerce Site</p>
+    </footer>
+    <script src="assets/js/pages/CheckoutPage.js"></script>
+</body>
+</html>
